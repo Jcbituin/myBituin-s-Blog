@@ -1,16 +1,7 @@
-import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
+
 
 st.title("Personal Info")
-
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_coding = load_lottieurl("https://lottie.host/db9ae4cd-a20b-407c-811e-4b9065073aec/7EbxAXNC8o.json")
 
 # ---- PERSONAL INFO ----
 with st.container():
@@ -30,5 +21,4 @@ with st.container():
             - Course: BSCpE - Bachelor of Science in Computer Engineering
             """
             )
-    with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
+    
